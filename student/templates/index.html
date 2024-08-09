@@ -56,8 +56,18 @@
               <li><a href="#">Tracker</a></li>
             </ul>
           </li>
+
+
+          {% if not request.user.is_authenticated %}
           <li><a href="/signup">Sign in</a></li>
+          {% else %}
+          <li><a href="/logout">Logout</a></li>
+          {% endif %}
         </ul>
+
+
+
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
